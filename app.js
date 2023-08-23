@@ -12,28 +12,30 @@
 //   console.log(3);
 // }
 
-// function one() {
-//   console.log(1);
-// }
-
-// function two() {
-//   console.log(2);
-// }
-
-// function three() {
-//   console.log(3);
-// }
-
-// one();
-// two();
-// three();
-
-function message() {
-    console.log("hello")
+function one() {
+  console.log(1);
 }
 
-function logger(message) {
-    message()
+function two() {
+  setTimeout(() => {
+    console.log(2);
+    three();
+  }, 0);
 }
 
-logger(message)
+function three() {
+  console.log(3);
+}
+
+one();
+two();
+
+// function message() {
+//     console.log("hello")
+// }
+
+// function logger(message) {
+//     message()
+// }
+
+// logger(message)
