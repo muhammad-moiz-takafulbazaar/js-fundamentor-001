@@ -82,3 +82,13 @@
 //   .then((res) => console.log(res))
 //   .catch((e) => console.log(e))
 //   .finally(e => console.log('F*** you function complete'));
+
+const todo = async () => {
+  const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+  const data = await response.json();
+  console.log(1);
+  console.log(data);
+  console.log(2);
+}
+
+todo()
