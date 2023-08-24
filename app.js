@@ -84,11 +84,18 @@
 //   .finally(e => console.log('F*** you function complete'));
 
 const todo = async () => {
-  const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
-  const data = await response.json();
-  console.log(1);
-  console.log(data);
-  console.log(2);
-}
+  try {
+    const response = await fetch(
+      'https://jsonplaceholder.typicode.com/todos/1'
+    );
+    const data = await response.json();
+    console.log(1);
+    console.log(data);
+    console.log(2);
+  } catch (err) {
+    console.log('something went wrong');
+    console.log(err)
+  }
+};
 
-todo()
+todo();
